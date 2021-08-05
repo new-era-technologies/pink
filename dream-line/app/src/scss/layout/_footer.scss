@@ -1,1 +1,97 @@
-.footer {}
+.footer {
+    &__wrapper {
+        width: 100%;
+        padding: 35px 0;
+        background-color: #282a28;
+        box-sizing: border-box;
+    }
+    &__inner {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__list {
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__list:last-child {
+        margin-bottom: 0;
+    }
+    &__item {
+        text-align: left;
+        transition: .2s all;
+    }
+    &__item:first-child {
+        margin-bottom: 25px;
+        @include font(Univers, normal, 300, 21px, 1.2, #aeaeae);
+    }
+    &__item:not(:first-child):hover {
+        margin-left: 10px;
+    }
+    &__link,
+    &__cr {
+        @include font(Univers, normal, 300, 15px, 1.2, #8b8b8b);
+        text-decoration: none;
+    }
+}
+
+.soc {
+    &__list {
+        margin: 20px 0 30px 0;
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        width: 52px;
+        height: 52px;
+        margin-right: 25px;
+        background-color: #696b6a;
+        border-radius: 50%;
+        transition: .2s all;
+    }
+    &__item:hover {
+        transform: rotate3d(1, 1, 1, 360deg);
+        background-color: #de6d6e;
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .footer {
+        &__inner {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__list {
+            margin-bottom: 0;
+        }
+    }
+    .soc {
+        &__item {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media all and (min-width: 960px) {
+    .soc {
+        &__item {
+            margin-right: 25px;
+        }
+    }
+}
