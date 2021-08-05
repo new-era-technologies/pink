@@ -1,1 +1,1 @@
-"use strict";
+"use strict";var arts=document.querySelectorAll(".art");arts.forEach(function(e){return e.addEventListener("mouseenter",function(){this.children[0].children[0].style.opacity=.2,this.children[0].children[1].classList.add("show-descr")})}),arts.forEach(function(e){return e.addEventListener("mouseleave",function(){this.children[0].children[0].style.opacity=1,this.children[0].children[1].classList.remove("show-descr")})});
